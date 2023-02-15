@@ -3,6 +3,7 @@ import './App.css';
 import BalanceChecker from './BalanceChecker';
 import FormComponent from './FormComponent';
 import RequestTable from './RequestTable';
+import CreateAccountButton from './CreateAccountButton';
 
 class App extends Component {
   render() {
@@ -10,6 +11,7 @@ class App extends Component {
       <div className="App">
         <h1>Żetonium Faucet </h1>
         <img src={require('./headerimage.jpg')} width="100" height="100" alt="header image" />
+        <CreateAccountButton />
         <FormComponent
           endpoint="https://pdsapi.dase.io:8081/api/balances/transfer"
           buttonText="Submit PDSAPI"
