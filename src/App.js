@@ -9,7 +9,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Żetonium Faucet </h1>
+        <h1>Żetonium Testnet Faucet </h1>
         <img src={require('./headerimage.jpg')} width="100" height="100" alt="header image" />
         <FormComponent
           endpoint="https://pdsapi.dase.io:8081/api/balances/transfer"
