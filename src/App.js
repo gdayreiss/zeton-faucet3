@@ -1,25 +1,31 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import BalanceChecker from './BalanceChecker';
+import FormComponent from './FormComponent';
+import RequestTable from './RequestTable';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <h1>Żetonium Faucet </h1>
+        <img src={require('./headerimage.jpg')} width="100" height="100" alt="header image" />
+        <FormComponent
+          endpoint="https://pdsapi.dase.io:8081/api/balances/transfer"
+          buttonText="Submit PDSAPI"
+          title="PDSAPI"
+        />
+        <FormComponent
+          endpoint="https://beta.dase.io:8081/api/balances/transfer"
+          buttonText="Submit Beta"
+          title="Beta"
+        />
+        <h1>Faucet Balance</h1>
+        <BalanceChecker />
+        <RequestTable />
+      </div>
+    );
+  }
 }
 
 export default App;
