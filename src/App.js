@@ -22,7 +22,7 @@ class App extends Component {
           title="Beta Faucet"
         />
         <CreateAccountButton />
-        <h1>Faucet Balance</h1>
+        <h2>Faucet Balance</h2>
         <BalanceChecker />
         <RequestTable />
       </div>

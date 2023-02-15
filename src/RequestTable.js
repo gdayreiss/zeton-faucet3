@@ -30,7 +30,7 @@ class RequestTable extends Component {
   render() {
     return (
       <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
-        <h1> Faucet Log</h1>
+        <h2> Faucet Log</h2>
         <button onClick={this.handleClick}>Recent Transactions</button>
         {this.state.showTable && (
           <table>
