@@ -11,17 +11,17 @@ class App extends Component {
       <div className="App">
         <h1>Żetonium Faucet </h1>
         <img src={require('./headerimage.jpg')} width="100" height="100" alt="header image" />
-        <CreateAccountButton />
         <FormComponent
           endpoint="https://pdsapi.dase.io:8081/api/balances/transfer"
-          buttonText="Submit PDSAPI"
-          title="PDSAPI"
+          buttonText="Fund PDSAPI"
+          title="PDSAPI Faucet"
         />
         <FormComponent
           endpoint="https://beta.dase.io:8081/api/balances/transfer"
-          buttonText="Submit Beta"
-          title="Beta"
+          buttonText="Fund Beta"
+          title="Beta Faucet"
         />
+        <CreateAccountButton />
         <h1>Faucet Balance</h1>
         <BalanceChecker />
         <RequestTable />
