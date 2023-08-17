@@ -49,7 +49,7 @@ class FormComponent extends Component {
       <form onSubmit={this.handleSubmit} style={{display: 'flex', flexDirection: 'column', alignItems
       :'center', justifyContent: 'center'}}>
         <label>
-          Blockchain ID:
+          Żetonium ID:
           <input type="text" name="blockchainId" value={this.state.blockchainId} onChange={this.handleChange} />
         </label>
         <input type="submit" value= {this.props.buttonText} />
