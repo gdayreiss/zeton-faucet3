@@ -12,7 +12,7 @@ class RequestTable extends Component {
 
   handleClick = () => {
     const sevenDaysAgoInSeconds = Math.round(Date.now() / 1000) - 604800;
-    fetch(`https://pdsapi.dase.io:8081/api/balances/history?userId=0xb85973a890991e1d3cc2f5925302a532a9d17b71&fromTimestampInSec=${sevenDaysAgoInSeconds}&limit=20`)
+    fetch(`https://pdsapi.dase.io:8081/api/v36/balances/history?userId=0xb85973a890991e1d3cc2f5925302a532a9d17b71&fromTimestampInSec=${sevenDaysAgoInSeconds}&limit=20`)
     .then(response => {
       console.log(response);
       return response.json();

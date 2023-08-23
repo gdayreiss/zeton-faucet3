@@ -9,8 +9,8 @@ const BalanceChecker = () => {
   const handleClick = async () => {
     setIsLoading(true);
     const response = await Promise.all([
-      fetch('https://pdsapi.dase.io:8081/api/balances?zetoniumUserId=0xb85973a890991e1d3cc2f5925302a532a9d17b71'),
-      fetch('https://beta.dase.io:8081/api/balances?zetoniumUserId=0xb85973a890991e1d3cc2f5925302a532a9d17b71')
+      fetch('https://pdsapi.dase.io:8081/api/v36/balances?zetoniumUserId=0xb85973a890991e1d3cc2f5925302a532a9d17b71'),
+      fetch('https://beta.dase.io:8081/api/v37/balances?zetoniumUserId=0xb85973a890991e1d3cc2f5925302a532a9d17b71')
     ]);
     const [data, betaData] = await Promise.all(
       response.map(res => res.json())

@@ -5,7 +5,7 @@ function CreateAccountButton(){
     const [data, setData] = useState('');
 
     const handleClick = () => {
-        fetch(`https://pdsapi.dase.io:8081/api/users/create`,{
+        fetch(`https://pdsapi.dase.io:8081/api/v36/users/create`,{
             method: 'POST',
             headers: {
                 "Content-Type": 'application/json'
