@@ -13,12 +13,12 @@ class App extends Component {
         <h1>Żetonium Testnet Faucet </h1>
         <img src={require('./backgroundImage.png')} width="400" height="400" alt="header image" />
         <FormComponent
-          endpoint="https://pdsapi.dase.io:8081/api/balances/transfer"
+          endpoint="https://pdsapi.dase.io:8081/api/v37/balances/transfer"
           buttonText="Fund PDSAPI"
           title="PDSAPI Faucet"
         />
         <FormComponent
-          endpoint="https://beta.dase.io:8081/api/balances/transfer"
+          endpoint="https://beta.dase.io:8081/api/v37/balances/transfer"
           buttonText="Fund Beta"
           title="Beta Faucet"
         />
